@@ -12,6 +12,14 @@ class Pessoa:
     def cumprimentar(self):
         return f'Olá {id(self)}'
 
+    @staticmethod # decorator
+    def metodo_estatico():
+        return 42
+
+    @classmethod # decorator
+    def nome_e_atributos_de_classe(cls):
+        return f'{cls} = olhos{cls.olhos}'
+
 if __name__ == '__main__':
     joao = Pessoa(nome='João', idade=17)
     pedro = Pessoa(joao, nome='Pedro', idade=45)
@@ -34,3 +42,5 @@ if __name__ == '__main__':
     print(pedro.__dict__)
     # __dict__ printa no console os atributos de instancia
     # e dinamicos de cada classe
+    print(Pessoa.metodo_estatico(), pedro.metodo_estatico())
+    print(Pessoa.nome_e_atributos_de_classe(), pedro.nome_e_atributos_de_classe())
