@@ -20,3 +20,14 @@ if __name__ == '__main__':
     print(joao.cumprimentar())
     print(joao.nome)
     print(joao.idade)
+    pedro.sobrenome = 'Alves'
+    # add um atributo dinâmico
+
+    del joao.filhos
+    # 'del' deleta atributos de classes dinamicamente mas não
+    # é uma boa prática, prefere-se que coloque na iniciação
+
+    print(joao.__dict__)
+    print(pedro.__dict__)
+    # __dict__ printa no console os atributos de instancia
+    # e dinamicos de cada classe
