@@ -1,8 +1,11 @@
 class Pessoa:
+    olhos = 2 # atributo de classe, reserva o mesmo lugar na memória
+    # para todos os objetos com o valor defaut
+
     def __init__(self, *filhos, nome=None, idade=0):
-        # None deixa a variável default sem valor, permitindo que instancie
-        # com atributo sem valor
-        self.nome = nome
+        # None deixa a variável default sem valor, permitindo
+        # que instancie com atributo sem valor
+        self.nome = str(nome)
         self.idade = int(idade)
         self.filhos = list(filhos)
 
