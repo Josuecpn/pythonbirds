@@ -39,12 +39,19 @@ class Direcao:
     n = 0
 
     def girar_a_direita(self):
-        self.n += 1
+        if self.n == 3:
+            self.n -= 3
+        else:
+            self.n += 1
+
         self.direcao = self.direcoes[self.n]
         return self.direcao
 
     def girar_a_esquerda(self):
-        self.n -= 1
+        if self.n == -4:
+            self.n += 4
+        else:
+            self.n -= 1
         self.direcao = self.direcoes[self.n]
         return self.direcao
 
