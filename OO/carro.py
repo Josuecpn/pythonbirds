@@ -29,7 +29,7 @@ class Motor:
         self.velocidade += 1
         return self.velocidade
 
-    def freiar(self):
+    def frear(self):
         if self.velocidade == 1:
             self.velocidade -= 1
         elif self.velocidade == 0:
@@ -83,9 +83,9 @@ if __name__ == '__main__':
     carro.girar_a_direita()
     carro.calcular_direcao()
 
-    carro.freiar()
+    carro.frear()
     carro.calcular_velocidade()
-    carro.freiar()
+    carro.frear()
     carro.calcular_velocidade()
-    carro.freiar()
+    carro.frear()
     carro.calcular_velocidade()
