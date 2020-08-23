@@ -30,12 +30,8 @@ class Motor:
         return self.velocidade
 
     def frear(self):
-        if self.velocidade == 1:
-            self.velocidade -= 1
-        elif self.velocidade == 0:
-            self.velocidade == 0
-        else:
-            self.velocidade -= 2
+        self.velocidade -= 2
+        self.velocidade = max(0, self.velocidade)
 
 class Direcao:
     direcoes = ('Norte', 'Leste', 'Sul', 'Oeste')
