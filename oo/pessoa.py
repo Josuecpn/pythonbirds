@@ -20,9 +20,12 @@ class Pessoa:
     def nome_e_atributos_de_classe(cls):
         return f'{cls} = olhos{cls.olhos}'
 
+class Homem(Pessoa):
+    pass
+
 if __name__ == '__main__':
-    joao = Pessoa(nome='João', idade=17)
-    pedro = Pessoa(joao, nome='Pedro', idade=45)
+    joao = Homem(nome='João', idade=17)
+    pedro = Homem(joao, nome='Pedro', idade=45)
     print(pedro.cumprimentar())
     print(pedro.nome)
     print(pedro.idade)
@@ -44,3 +47,8 @@ if __name__ == '__main__':
     # e dinamicos de cada classe
     print(Pessoa.metodo_estatico(), pedro.metodo_estatico())
     print(Pessoa.nome_e_atributos_de_classe(), pedro.nome_e_atributos_de_classe())
+    pessoa = Pessoa('anonimo')
+    print(isinstance(pessoa, Pessoa))
+    print(isinstance(pessoa, Homem))
+    print(isinstance(pedro, Pessoa))
+    print(isinstance(pedro, Homem))
